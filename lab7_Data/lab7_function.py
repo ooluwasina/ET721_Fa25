@@ -2,8 +2,7 @@
 Daniel Oluwasina
 Lab 7, accessing data in a file
 
-"""
-
+"""   
 def testing():
     print("Daniel Oluwasina")
 
