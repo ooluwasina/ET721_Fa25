@@ -4,6 +4,8 @@ Lab8, Unit testing
 """
 import unittest
 import calculation
+from employee import Employee
+
 def addtwonumbers(a,b):
     return a+b
 
@@ -37,6 +39,25 @@ class TestCalculation(unittest.TestCase):
     def test_subtraction(self):
         self.assertEqual(calculation.subtracttwonumbers(5), 5)
         self.assertEqual(calculation.subtracttwonumbers(5,4), 1)
+
+class TestEmployee(unittest.TestCase):
+    def setUp(self):
+        self.emp1 = Employee('John', 'Doe', 50000)
+    
+    def testEmail(self):
+        self.assertEqual(self.emp1.emailemployee, 'John.Doe@email.com')
+
+    def testFullName(self):
+        self.assertEqual(self.emp1.fullname, 'John Doe')
+
+        self.emp1.first = "Jane"
+
+        self.assertEqual(self.emp1.fullname, 'Jane Doe')
+
+    def test_salary(self):
+        self.assertEqual(self.emp1.sal, 50000)
+        self.emp1.apply_raise()
+        self.assertEqual(self.emp1.sal, 52500)
 
 if __name__ == "__main__":
     unittest.main()
