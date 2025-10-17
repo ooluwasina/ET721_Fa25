@@ -1,0 +1,4 @@
+
+yahoo = 3
+gmail = 6
+hotmail = 4
