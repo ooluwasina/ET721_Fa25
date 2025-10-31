@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +10,27 @@
 </head>
 <body>
     <h1 class="title">Welcome to Flask</h1>
-    <h2 class="subtitle">By: Daniel Oluwasina</h2>
+    <h2 class="subtitle">By: {{username}}</h2>
     <div class="introimg">
         <img src="../static/flower.jpg" alt="image of a flower">
     </div>
+
+    <h1>Jinja Engine</h1>
+    <ul>
+        {% for eachfruits in fruits_list %}
+        <li>{{eachfruits}}</li>
+        {% endfor %}
+    </ul>
+
+    {% if checkfruit in fruits_list %}
+        <p> Great we have kiwi today </p>
+    {% else %}
+        <p>kiwi is not in the list</p>
+    {% endif %}
+
+    {% extends "product.html" %}
+        {%block image%}../static/flower.jpg{%endblock%}
+        {%block imagetitle%}flower{%endblock%}
+        {%block cardinfo%}...{%endblock%}
 </body>
 </html>
