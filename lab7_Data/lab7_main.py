@@ -3,6 +3,7 @@ Daniel Oluwasina
 Lab 7, accessing data in a file
 Oct 14, 2025
 """
+
 from lab7_function import *
 
 testing()

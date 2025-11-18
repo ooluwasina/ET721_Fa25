@@ -3,26 +3,23 @@ Oluwaferanmi Oluwasina
 lab 4, dictionary and functions
 Sept 10,2025
 """
+
 print("----- Example 1 Dictionary -----")
 # contact dictonary
-contact = {
-    "Bill" : "718-111-2222",
-    "Martha": "646-000-3333",
-    "peter": "212-000-1111"
-}
+contact = {"Bill": "718-111-2222", "Martha": "646-000-3333", "peter": "212-000-1111"}
 print(contact)
 
 
-#save value of specfic key
+# save value of specfic key
 user1 = contact["Martha"]
 print(f"users phone numer  = {user1}")
 
-#add new content to the dictionary
+# add new content to the dictionary
 contact["Anna"] = "646-222-3333"
 
 print(contact)
 
-#update via a specific file
+# update via a specific file
 
 contact["peter"] = "800-000-0000"
 print(contact)
@@ -36,7 +33,7 @@ for i in contact:
     print(contact[i])
 
 for i in contact:
-    print(f"{i} = {contact[i]}") 
+    print(f"{i} = {contact[i]}")
 
 
 print("----- Example 3: length of a dictionary -----")
@@ -57,7 +54,7 @@ print(contact)
 
 print("----- Example 6: Removing a Key:value pair in a dictionary -----")
 print(contact)
-contact.update({"lucas":"212-111-1111"})
+contact.update({"lucas": "212-111-1111"})
 print(contact)
 
 print("----- Example 7: return items Key, value  in a dictionary -----")
@@ -81,9 +78,17 @@ for word in word_count_dict:
     print(f" '{word}' appears {word_count_dict}'")
 
 print("----- Exercise -----")
-users = ["peterpan@yahoo.com","annie@hotmail.com","Carl@hotmail.com","martha@gmail.com","cassie@yahoo.com","Josue@hotmail.com","John@hotmail.com"]
+users = [
+    "peterpan@yahoo.com",
+    "annie@hotmail.com",
+    "Carl@hotmail.com",
+    "martha@gmail.com",
+    "cassie@yahoo.com",
+    "Josue@hotmail.com",
+    "John@hotmail.com",
+]
 print(users)
-   
+
 email_phrase = "yahoo gmail hotmail"
 phrase_list = email_phrase.split()
 

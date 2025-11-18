@@ -1,6 +1,8 @@
 """
 Daniel Oluwasina
 """
+
+
 class BankAccount:
     def __init__(self, owner, balance=0):
         self.owner = owner
@@ -22,4 +24,3 @@ class BankAccount:
 
     def get_balance(self):
         return self.balance
-
