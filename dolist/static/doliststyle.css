@@ -25,11 +25,17 @@ img {width: 100%;}
 }
 .btndeleteeach {
     background-color: orange;
+    text-align: center;
     color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
 }
 .btndeleteall {
-    background-color:darkorange;
+    background-color: orange;
+    text-align: center;
     color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
 }
 
 .btndeleteall:hover, .btndeleteeach:hover .btnaddlist:hover {
