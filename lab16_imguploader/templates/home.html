@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 16, Image Upload App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
     <main class="maincontainer">
         <h1 class="title">Lab 16 Image uploader app by Daniel Oluwasina </h1>
+        <section>
+            <nav><a class="Upload_img_btn" href = "{% url 'add_post'  %}">Upload images</a></nav>
+        </section>
+
+        <section class="albumcontainer">
+            {% for post in object_list %}
+            <div class="card">
+                <p class="card-title">{{ post.title }}</p>
+                <div class="card-img">
+                    <img src="{{ post.image.url }}" alt="Image of {{ post.title }}">
+                </div>
+            </div>
+            {% endfor %}
+        </section>
     </main>
 </body>
 </html>
